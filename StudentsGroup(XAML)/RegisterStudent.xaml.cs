@@ -23,6 +23,8 @@ namespace StudentsGroup_XAML_
     /// </summary>
     public sealed partial class RegisterStudent : Page
     {
+        private const int MaxAge = 120;
+
         public RegisterStudent()
         {
             this.InitializeComponent();
@@ -31,6 +33,16 @@ namespace StudentsGroup_XAML_
         private void backButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.GoBack();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+            for (int i = 1; i <= MaxAge; i++)
+            {
+                selectAgeBox.Items.Add(i.ToString());
+            }
         }
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
