@@ -35,7 +35,7 @@ namespace StudentsGroup_XAML_
             //SchoolController.Instance.Users.
             foreach (var it in SchoolController.Instance.Users)
             {
-                listView.Items.Add(it.ToString());
+                listView.Items.Add(it);
             }
 
         }
@@ -53,7 +53,7 @@ namespace StudentsGroup_XAML_
 
         private void listView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Frame.Navigate(typeof(StudentDetailPage));
+            Frame.Navigate(typeof(StudentDetailPage), e.ClickedItem);
         }
 
         private void RegisterStudentBtn_Click(object sender, RoutedEventArgs e)

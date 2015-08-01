@@ -51,6 +51,7 @@ namespace StudentsGroup_XAML_
             userInfo.FirstName = firstNameTextBox.Text;
             userInfo.SecondName = SecondNameTextBox.Text;
             userInfo.LastName = LastNameTextBox.Text;
+            userInfo.Uri = ImageUrlTextBox.Text;
             int.TryParse(selectAgeBox.SelectedItem as string, out userInfo.Age);
             SchoolController.Instance.AddStudent(userInfo, new GroupID("C#-15-01"));
         }

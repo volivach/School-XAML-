@@ -11,8 +11,8 @@ namespace StudentsGroup
     {
         Regex _regex = new Regex(@"[a-z]");
 
-        public Teacher(string firstName, string lastName, string secondName, int age)
-            : base(firstName, lastName, secondName, age)
+        public Teacher(string firstName, string lastName, string secondName, string imageUri, int age)
+            : base(firstName, lastName, secondName, imageUri, age)
         {
         }
 

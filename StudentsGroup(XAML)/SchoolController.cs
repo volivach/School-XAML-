@@ -52,15 +52,20 @@ namespace StudentsGroup
             if (group == null)
                 throw new GroupNotFoundException(String.Format("Can't find group : {0}", id.Id));
 
-            Student st = new Student(userInfo.FirstName, userInfo.LastName, userInfo.SecondName, userInfo.Age);
+            Student st = new Student(userInfo.FirstName, userInfo.LastName, userInfo.SecondName, userInfo.Uri, userInfo.Age);
             group.AddStudent(st);
             AddUser(st, "Student");
         }
 
         public void AddTeacher(UserInfo userInfo)
         {
-            Teacher st = new Teacher(userInfo.FirstName, userInfo.LastName, userInfo.SecondName, userInfo.Age);
+            Teacher st = new Teacher(userInfo.FirstName, userInfo.LastName, userInfo.SecondName, userInfo.Uri, userInfo.Age);
             AddUser(st, "Teacher");
+        }
+
+        public Student FindStudentByString(string st)
+        {
+            return null;
         }
 
         private void AddUser(User user, string type)

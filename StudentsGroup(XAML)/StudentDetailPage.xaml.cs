@@ -19,6 +19,7 @@ using Windows.Networking.BackgroundTransfer;
 using Windows.Storage;
 using Windows.Storage.Streams;
 using Windows.UI.Xaml.Media.Imaging;
+using StudentsGroup;
 
 // The Item Detail Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234232
 
@@ -96,8 +97,11 @@ namespace StudentsGroup_XAML_
         {
             navigationHelper.OnNavigatedTo(e);
 
-            Uri uri = new Uri(@"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/4/11/1397210130748/Spring-Lamb.-Image-shot-2-011.jpg");
+            User user = e.Parameter as User;
+            if (user == null)
+                return;
 
+            Uri uri = new Uri(user.Uri);
             var fileName = Guid.NewGuid().ToString() + ".jpg";
 
             //// download pic
@@ -135,6 +139,8 @@ namespace StudentsGroup_XAML_
                 }
             }
 
+
+            textBlock.Text = user.ToString();
             //// read from pictures library
             //var pictureFile = await KnownFolders.PicturesLibrary.GetFileAsync(fileName);
             //using (var pictureStream = await pictureFile.OpenAsync(FileAccessMode.Read))
