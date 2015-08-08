@@ -3,3 +3,11 @@ d:\Projects\Windows XAML\StudentsGroup(XAML)\FirstDll\bin\Debug\FirstDll.pdb
 d:\Projects\Windows XAML\StudentsGroup(XAML)\FirstDll\obj\Debug\FirstDll.csprojResolveAssemblyReference.cache
 d:\Projects\Windows XAML\StudentsGroup(XAML)\FirstDll\obj\Debug\FirstDll.dll
 d:\Projects\Windows XAML\StudentsGroup(XAML)\FirstDll\obj\Debug\FirstDll.pdb
+d:\Projects\Windows XAML\StudentsGroup(XAML)\FirstDll\bin\Debug\NetOffice.dll
+d:\Projects\Windows XAML\StudentsGroup(XAML)\FirstDll\bin\Debug\OfficeApi.dll
+d:\Projects\Windows XAML\StudentsGroup(XAML)\FirstDll\bin\Debug\VBIDEApi.dll
+d:\Projects\Windows XAML\StudentsGroup(XAML)\FirstDll\bin\Debug\WordApi.dll
+d:\Projects\Windows XAML\StudentsGroup(XAML)\FirstDll\bin\Debug\NetOffice.xml
+d:\Projects\Windows XAML\StudentsGroup(XAML)\FirstDll\bin\Debug\OfficeApi.xml
+d:\Projects\Windows XAML\StudentsGroup(XAML)\FirstDll\bin\Debug\VBIDEApi.xml
+d:\Projects\Windows XAML\StudentsGroup(XAML)\FirstDll\bin\Debug\WordApi.xml

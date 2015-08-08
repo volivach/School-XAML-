@@ -31,7 +31,6 @@ namespace FirstDll
         //    object doc = Word.GenerateDocument(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Product Catalog.docx", this.Products.SelectedItem, mapContent);
         //    // Export the document object to Word.
         //    Word.Export(doc, "Catalog", 2, false, this.Products, mapContent);
-        //}
-    }
+
     }
 }
