@@ -57,7 +57,10 @@ namespace StudentsGroup
             _users.Clear();
             foreach (var it in listUsers)
             {
-                _users.Add(User.CreateUser(it.FirstName, it.SecondName, it.LastName, it.imageUri, it.Age, "Student"));
+                string uri = string.IsNullOrEmpty(it.imageUri) ?
+                    @"http://www.wageningenur.nl/upload_mm/8/8/e/ee050040-ff95-4b6a-8005-d0089348ba13_student_studeren_bieb_bibliotheek_lezen_640x430_640x430.jpg" :
+                    it.imageUri;
+                _users.Add(User.CreateUser(it.FirstName, it.SecondName, it.LastName, uri, it.Age, "Student"));
             }
         }
 
