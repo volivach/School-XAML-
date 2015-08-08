@@ -4,9 +4,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using StudentsGroup_XAML_.SchoolDataProvider;
+using Newtonsoft.Json;
 
 namespace StudentsGroup
 {
+    class UserDTO
+    {
+        public string FirstName { get; set; }
+        public string SecondName { get; set; }
+        public string LastName { get; set; }
+        public string imageUri { get; set; }
+        public short Age { get; set; }
+        public int RolesId { get; set; }
+        public int GroupsId { get; set; }
+    }
+
     class SchoolController
     {
         private List<Group> _groups = new List<Group>();
@@ -24,11 +37,30 @@ namespace StudentsGroup
             get
             {
                 if (_instance == null)
+                {
                     _instance = new SchoolController();
+                }
 
                 return _instance;
             }
         }
+
+        public AuthentificationManager AuthManager { get { return _authManager; } }
+
+        internal async Task LoadData()
+        {
+            var client = new SchoolServiceClient(SchoolServiceClient.EndpointConfiguration.BasicHttpBinding_ISchoolService);
+
+            string jsonStringResp = await client.GetUsersAsync();
+            var listUsers = JsonConvert.DeserializeObject<List<UserDTO>>(jsonStringResp);
+
+            _users.Clear();
+            foreach (var it in listUsers)
+            {
+                _users.Add(User.CreateUser(it.FirstName, it.SecondName, it.LastName, it.imageUri, it.Age, "Student"));
+            }
+        }
+
 
         public List<Group> Groups
         {

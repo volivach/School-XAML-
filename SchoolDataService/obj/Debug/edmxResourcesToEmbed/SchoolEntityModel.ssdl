@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SchoolEntityModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="SchoolEntityModelStoreContainer">
+    <EntitySet Name="Users" EntityType="SchoolEntityModel.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Roles" EntityType="SchoolEntityModel.Store.Roles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Groups" EntityType="SchoolEntityModel.Store.Groups" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="UsersRoles" Association="SchoolEntityModel.Store.UsersRoles">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Roles" EntitySet="Roles" />
+    </AssociationSet>
+    <AssociationSet Name="GroupsUsers" Association="SchoolEntityModel.Store.GroupsUsers">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Groups" EntitySet="Groups" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SecondName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="imageUri" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Age" Type="smallint" Nullable="false" />
+    <Property Name="RolesId" Type="int" Nullable="false" />
+    <Property Name="GroupsId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Role" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Groups">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="UsersRoles">
+    <End Role="Users" Type="SchoolEntityModel.Store.Users" Multiplicity="*" />
+    <End Role="Roles" Type="SchoolEntityModel.Store.Roles" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="RolesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="GroupsUsers">
+    <End Role="Users" Type="SchoolEntityModel.Store.Users" Multiplicity="*" />
+    <End Role="Groups" Type="SchoolEntityModel.Store.Groups" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Groups">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="GroupsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

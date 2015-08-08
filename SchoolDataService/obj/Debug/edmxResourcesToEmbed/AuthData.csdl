@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="AuthData" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="AuthDataContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AuthDataEntities" EntityType="AuthData.AuthDataEntity" />
+    <EntitySet Name="Roles" EntityType="AuthData.Roles" />
+    <AssociationSet Name="AuthDataRoles" Association="AuthData.AuthDataRoles">
+      <End Role="AuthData" EntitySet="AuthDataEntities" />
+      <End Role="Roles" EntitySet="Roles" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AuthDataEntity">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Login" Type="String" Nullable="false" />
+    <Property Name="Password" Type="String" Nullable="false" />
+    <NavigationProperty Name="Role" Relationship="AuthData.AuthDataRoles" FromRole="AuthData" ToRole="Roles" />
+    <Property Name="RolesId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Role" Type="String" Nullable="false" />
+    <NavigationProperty Name="AuthDatas" Relationship="AuthData.AuthDataRoles" FromRole="Roles" ToRole="AuthData" />
+  </EntityType>
+  <Association Name="AuthDataRoles">
+    <End Type="AuthData.AuthDataEntity" Role="AuthData" Multiplicity="*" />
+    <End Type="AuthData.Roles" Role="Roles" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AuthData">
+        <PropertyRef Name="RolesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

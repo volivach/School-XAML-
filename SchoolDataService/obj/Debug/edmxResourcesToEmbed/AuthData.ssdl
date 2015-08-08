@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AuthData.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="AuthDataStoreContainer">
+    <EntitySet Name="AuthDatas" EntityType="AuthData.Store.AuthDatas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Roles" EntityType="AuthData.Store.Roles" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="AuthDataRoles" Association="AuthData.Store.AuthDataRoles">
+      <End Role="AuthData" EntitySet="AuthDatas" />
+      <End Role="Roles" EntitySet="Roles" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AuthDatas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Login" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="RolesId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Role" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="AuthDataRoles">
+    <End Role="AuthData" Type="AuthData.Store.AuthDatas" Multiplicity="*" />
+    <End Role="Roles" Type="AuthData.Store.Roles" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AuthData">
+        <PropertyRef Name="RolesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

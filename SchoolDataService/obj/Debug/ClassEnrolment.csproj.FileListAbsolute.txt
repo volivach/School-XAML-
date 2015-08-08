@@ -1,0 +1,18 @@
+D:\Projects\C#\ClassEnrolment\ClassEnrolment\bin\Debug\ClassEnrolment.exe.config
+D:\Projects\C#\ClassEnrolment\ClassEnrolment\bin\Debug\ClassEnrolment.exe
+D:\Projects\C#\ClassEnrolment\ClassEnrolment\bin\Debug\ClassEnrolment.pdb
+D:\Projects\C#\ClassEnrolment\ClassEnrolment\obj\Debug\ClassEnrolment.exe
+D:\Projects\C#\ClassEnrolment\ClassEnrolment\obj\Debug\ClassEnrolment.pdb
+D:\Projects\C#\ClassEnrolment\ClassEnrolment\bin\Debug\EntityFramework.dll
+D:\Projects\C#\ClassEnrolment\ClassEnrolment\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\C#\ClassEnrolment\ClassEnrolment\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\C#\ClassEnrolment\ClassEnrolment\bin\Debug\EntityFramework.xml
+D:\Projects\C#\ClassEnrolment\ClassEnrolment\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\C#\ClassEnrolment\ClassEnrolment\bin\Debug\Newtonsoft.Json.xml
+D:\Projects\C#\ClassEnrolment\ClassEnrolment\bin\Debug\System.Data.SQLite.dll
+D:\Projects\C#\ClassEnrolment\ClassEnrolment\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Projects\C#\ClassEnrolment\ClassEnrolment\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Projects\C#\ClassEnrolment\ClassEnrolment\bin\Debug\System.Data.SQLite.xml
+D:\Projects\C#\ClassEnrolment\ClassEnrolment\obj\Debug\ClassEnrolment.csprojResolveAssemblyReference.cache
+D:\Projects\Windows XAML\StudentsGroup(XAML)\WCf\obj\Debug\ClassEnrolment.exe
+D:\Projects\Windows XAML\StudentsGroup(XAML)\WCf\obj\Debug\ClassEnrolment.pdb

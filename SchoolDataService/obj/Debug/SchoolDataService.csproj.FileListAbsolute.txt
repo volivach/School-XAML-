@@ -1,0 +1,12 @@
+D:\Projects\Windows XAML\StudentsGroup(XAML)\SchoolDataService\bin\Debug\SchoolDataService.exe.config
+D:\Projects\Windows XAML\StudentsGroup(XAML)\SchoolDataService\bin\Debug\SchoolDataService.exe
+D:\Projects\Windows XAML\StudentsGroup(XAML)\SchoolDataService\bin\Debug\SchoolDataService.pdb
+D:\Projects\Windows XAML\StudentsGroup(XAML)\SchoolDataService\bin\Debug\EntityFramework.dll
+D:\Projects\Windows XAML\StudentsGroup(XAML)\SchoolDataService\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\Windows XAML\StudentsGroup(XAML)\SchoolDataService\bin\Debug\EntityFramework.xml
+D:\Projects\Windows XAML\StudentsGroup(XAML)\SchoolDataService\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\Windows XAML\StudentsGroup(XAML)\SchoolDataService\obj\Debug\SchoolDataService.exe
+D:\Projects\Windows XAML\StudentsGroup(XAML)\SchoolDataService\obj\Debug\SchoolDataService.pdb
+d:\Projects\Windows XAML\StudentsGroup(XAML)\SchoolDataService\bin\Debug\Newtonsoft.Json.dll
+d:\Projects\Windows XAML\StudentsGroup(XAML)\SchoolDataService\bin\Debug\Newtonsoft.Json.xml
+d:\Projects\Windows XAML\StudentsGroup(XAML)\SchoolDataService\obj\Debug\SchoolDataService.csprojResolveAssemblyReference.cache

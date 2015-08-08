@@ -1,4 +1,5 @@
 ﻿using ClassEnrolment;
+using StudentsGroup_XAML_.Authentification;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -28,6 +29,7 @@ namespace StudentsGroup
         /// value - password
         /// </summary>
         Dictionary<string, AuthData> _authData;
+        IEncryptionProvider _encryptionProvider = new EncryptionProvider();
         IRole _activeUser;
 
         public AuthentificationManager()
@@ -46,12 +48,14 @@ namespace StudentsGroup
             }
         }
 
-        public void OnAuthRequest(AuthRequestInfo info)
+        public async void DoAuthentification(string login, string password)
         {
-            if (_authData.ContainsKey(info.Login))
+            string encryptPassword = await _encryptionProvider.Encrypt(password);
+            string decryptPassword = await _encryptionProvider.Decrypt(encryptPassword);
+            if (_authData.ContainsKey(login))
             {
-                AuthData authData = _authData[info.Login];
-                if (authData.Password.Equals(info.Password))
+                AuthData authData = _authData[login];
+                if (authData.Password.Equals(encryptPassword))
                 {
                     _activeUser = CreateUser(authData.Role);
                 }

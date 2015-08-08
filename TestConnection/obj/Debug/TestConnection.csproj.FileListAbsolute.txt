@@ -1,0 +1,6 @@
+d:\Projects\Windows XAML\StudentsGroup(XAML)\TestConnection\bin\Debug\TestConnection.exe.config
+d:\Projects\Windows XAML\StudentsGroup(XAML)\TestConnection\bin\Debug\TestConnection.exe
+d:\Projects\Windows XAML\StudentsGroup(XAML)\TestConnection\bin\Debug\TestConnection.pdb
+d:\Projects\Windows XAML\StudentsGroup(XAML)\TestConnection\obj\Debug\TestConnection.exe
+d:\Projects\Windows XAML\StudentsGroup(XAML)\TestConnection\obj\Debug\TestConnection.pdb
+d:\Projects\Windows XAML\StudentsGroup(XAML)\TestConnection\obj\Debug\TestConnection.csprojResolveAssemblyReference.cache

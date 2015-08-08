@@ -15,7 +15,6 @@ namespace StudentsGroup
         event Action<UserInfo> RemoveTeacherEvent;
         event Action<UserInfo> EditStudentEvent;
         event Action<int> ViewStudentEvent;
-        event Action<AuthRequestInfo> AuthentificationRequest;
 
         void ViewStudent(UserInfo st);
         void Authentificate();

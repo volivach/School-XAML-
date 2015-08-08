@@ -1,0 +1,6 @@
+D:\Projects\C#\StudentsGroup\StudentsGroup\bin\Debug\StudentsGroup.exe.config
+D:\Projects\C#\StudentsGroup\StudentsGroup\bin\Debug\StudentsGroup.exe
+D:\Projects\C#\StudentsGroup\StudentsGroup\bin\Debug\StudentsGroup.pdb
+D:\Projects\C#\StudentsGroup\StudentsGroup\obj\Debug\StudentsGroup.csprojResolveAssemblyReference.cache
+D:\Projects\C#\StudentsGroup\StudentsGroup\obj\Debug\StudentsGroup.exe
+D:\Projects\C#\StudentsGroup\StudentsGroup\obj\Debug\StudentsGroup.pdb

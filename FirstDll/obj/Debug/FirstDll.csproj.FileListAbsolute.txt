@@ -1,0 +1,5 @@
+d:\Projects\Windows XAML\StudentsGroup(XAML)\FirstDll\bin\Debug\FirstDll.dll
+d:\Projects\Windows XAML\StudentsGroup(XAML)\FirstDll\bin\Debug\FirstDll.pdb
+d:\Projects\Windows XAML\StudentsGroup(XAML)\FirstDll\obj\Debug\FirstDll.csprojResolveAssemblyReference.cache
+d:\Projects\Windows XAML\StudentsGroup(XAML)\FirstDll\obj\Debug\FirstDll.dll
+d:\Projects\Windows XAML\StudentsGroup(XAML)\FirstDll\obj\Debug\FirstDll.pdb
